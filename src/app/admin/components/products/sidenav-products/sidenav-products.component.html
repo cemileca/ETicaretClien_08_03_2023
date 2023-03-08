@@ -1,0 +1,24 @@
+<mat-drawer-container class="example-container">
+      <mat-drawer mode="side" opened class="drawerContent">
+
+        <div class="input-group mb-3" style=" margin-top: 25px; height: 60px;">
+          <span class="input-group-text" id="basic-addon1" style="width: 80px;" >Ürün Adı</span>
+          <input type="text" class="form-control" placeholder="Ürün Adı giriniz.. " #txtUrunAdi aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3" style=" margin-top: 5px; height: 60px;">
+          <span class="input-group-text" id="basic-addon1" style="width: 80px;">Stok</span>
+          <input type="text" class="form-control" placeholder="Stok Adedi giriniz" #txtStok aria-label="Username" min="0" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3" style=" margin-top: 5px; height: 60px;">
+          <span class="input-group-text" id="basic-addon1" style="width: 80px;">Fiyat</span>
+          <input type="text" class="form-control" placeholder="Fiyat giriniz.."  #txtFiyat min="0" aria-describedby="basic-addon1">
+        </div>
+        <div class="btn-group" role="group" aria-label="Basic example">
+          <button type="button" class="btn btn-primary" style="width: 340px; margin-left: 4px; height: 55px;" (click)="CreatingProduct(txtUrunAdi,txtStok,txtFiyat)" >Kaydet</button>
+        </div>
+    </mat-drawer>
+    <mat-drawer-content>
+<router-outlet></router-outlet>
+    </mat-drawer-content>
+  </mat-drawer-container>
+  
